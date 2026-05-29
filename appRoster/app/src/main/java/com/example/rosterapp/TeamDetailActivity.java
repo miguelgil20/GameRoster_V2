@@ -1,4 +1,4 @@
-package com.example.gameroster.ui;
+package com.example.rosterapp;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gameroster.R;
 import com.example.gameroster.api.API;
 import com.example.gameroster.api.UtilJSONParser;
 import com.example.gameroster.api.UtilREST;

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RosterApp">
         <activity
+            android:name=".playerActivity"
+            android:exported="false" />
+        <activity
             android:name=".TeamDetailActivity"
             android:exported="false" />
         <activity
