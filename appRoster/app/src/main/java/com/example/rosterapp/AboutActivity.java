@@ -23,7 +23,7 @@ public class AboutActivity extends AppCompatActivity {
         btnPlaySound = findViewById(R.id.btnPlaySound);
         btnEmail = findViewById(R.id.btnEmail);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.gameroster_sound);
+        mediaPlayer = MediaPlayer.create(this, R.raw.gameRoster);
 
         btnPlaySound.setOnClickListener(v -> {
             mediaPlayer.start();
