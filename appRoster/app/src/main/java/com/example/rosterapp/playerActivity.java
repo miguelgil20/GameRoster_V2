@@ -7,11 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.gameroster.adapter.PlayerAdapter;
-import com.example.gameroster.api.API;
-import com.example.gameroster.api.UtilJSONParser;
-import com.example.gameroster.api.UtilREST;
-import com.example.gameroster.model.PlayerModel;
+
 
 import java.util.ArrayList;
 
