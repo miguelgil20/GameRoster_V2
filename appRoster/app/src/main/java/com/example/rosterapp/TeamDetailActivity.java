@@ -8,6 +8,9 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.example.rosterapp.API.API;
+import com.example.rosterapp.API.UtilJSONParser;
+import com.example.rosterapp.API.UtilREST;
 
 import org.json.JSONObject;
 
@@ -41,7 +44,7 @@ public class TeamDetailActivity extends AppCompatActivity {
         btnFavorite.setOnClickListener(v -> confirmarFavorito());
 
         btnPlayers.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PlayersActivity.class);
+            Intent intent = new Intent(this, playerActivity.class);
             intent.putExtra("TEAM_ID", teamId);
             startActivity(intent);
         });

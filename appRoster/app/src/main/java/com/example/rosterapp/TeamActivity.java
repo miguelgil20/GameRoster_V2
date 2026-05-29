@@ -10,6 +10,10 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.example.rosterapp.API.TeamModel;
+import com.example.rosterapp.API.UtilJSONParser;
+import com.example.rosterapp.API.UtilREST;
+
 import java.util.ArrayList;
 
 public class TeamActivity extends AppCompatActivity {
@@ -26,7 +30,7 @@ public class TeamActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teams);
+        setContentView(R.layout.activity_team);
 
         listTeams = findViewById(R.id.listTeams);
         spinnerRegion = findViewById(R.id.spinnerRegion);
