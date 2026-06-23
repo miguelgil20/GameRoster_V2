@@ -30,10 +30,7 @@ public class SecurityConfig {
     private final JwtAccessDenied jwtAccessDenied;
     private final IUsuarioService usuarioService;
     
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return usuarioService::loadUserByUsername;
-    }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -66,7 +63,6 @@ public class SecurityConfig {
 
                         .anyRequest().authenticated()
                 )
-                .userDetailsService(userDetailsService())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

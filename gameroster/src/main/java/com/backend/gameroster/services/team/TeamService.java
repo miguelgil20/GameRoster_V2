@@ -36,14 +36,12 @@ public class TeamService implements ITeamService {
     @Override
     public List<TeamDTO> findAll() {
         try {
-            logger.info("Buscando todos los equipos");
 
             List<Team> teams = (List<Team>) teamRepository.findAll();
 
             return teamMapper.toDTOList(teams);
 
         } catch (Exception e) {
-            logger.error("Error al buscar todos los equipos", e);
             throw new ErrorGenericoException("Error al buscar todos los equipos", e);
         }
     }
@@ -51,7 +49,6 @@ public class TeamService implements ITeamService {
     @Override
     public TeamDTO findById(Long id) {
         try {
-            logger.info("Buscando equipo con id: {}", id);
 
             Team team = teamRepository.findById(id)
                     .orElseThrow(() ->
@@ -64,7 +61,6 @@ public class TeamService implements ITeamService {
             throw e;
 
         } catch (Exception e) {
-            logger.error("Error al buscar el equipo con id: {}", id, e);
             throw new ErrorGenericoException("Error al buscar el equipo con id: " + id, e);
         }
     }
@@ -82,7 +78,6 @@ public class TeamService implements ITeamService {
             return teamMapper.toDTO(teamSaved);
 
         } catch (Exception e) {
-            logger.error("Error al crear el equipo: {}", teamDTO, e);
             throw new CreateEntityException("Team", teamDTO, e);
         }
     }
@@ -90,7 +85,6 @@ public class TeamService implements ITeamService {
     @Override
     public TeamDTO update(Long id, TeamDTO teamDTO) {
         try {
-            logger.info("Actualizando equipo con id: {}", id);
 
             Team teamUpdate = teamRepository.findById(id)
                     .orElseThrow(() ->
@@ -106,11 +100,9 @@ public class TeamService implements ITeamService {
             return teamMapper.toDTO(teamSaved);
 
         } catch (NotFoundEntityException e) {
-            logger.warn("No se puede actualizar. Equipo no encontrado con id: {}", id);
             throw e;
 
         } catch (Exception e) {
-            logger.error("Error al actualizar el equipo con id: {}", id, e);
             throw new UpdateEntityException("Team", teamDTO, e);
         }
     }
@@ -118,7 +110,6 @@ public class TeamService implements ITeamService {
     @Override
     public void deleteById(Long id) {
         try {
-            logger.info("Eliminando equipo con id: {}", id);
 
             Team team = teamRepository.findById(id)
                     .orElseThrow(() ->
@@ -127,14 +118,10 @@ public class TeamService implements ITeamService {
 
             teamRepository.delete(team);
 
-            logger.info("Equipo eliminado correctamente con id: {}", id);
-
         } catch (NotFoundEntityException e) {
-            logger.warn("No se puede eliminar. Equipo no encontrado con id: {}", id);
             throw e;
 
         } catch (Exception e) {
-            logger.error("Error al eliminar el equipo con id: {}", id, e);
             throw new DeleteEntityException("Team", id, e);
         }
     }

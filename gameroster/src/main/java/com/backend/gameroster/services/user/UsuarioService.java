@@ -26,8 +26,6 @@ public class UsuarioService implements IUsuarioService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
-        logger.info("Buscando usuario {}", username);
-
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> {
 
@@ -37,8 +35,6 @@ public class UsuarioService implements IUsuarioService {
                             "Usuario " + username + " no encontrado"
                     );
                 });
-
-        logger.info("Usuario {} encontrado correctamente", username);
 
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),

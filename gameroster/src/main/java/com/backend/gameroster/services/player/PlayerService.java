@@ -43,15 +43,11 @@ public class PlayerService implements IPlayerService {
     public List<PlayerDTO> findAll() {
         try {
 
-            logger.info("Buscando todos los jugadores");
-
             List<Player> players = (List<Player>) playerRepository.findAll();
 
             return playerMapper.toDTOList(players);
 
         } catch (Exception e) {
-
-            logger.error("Error al buscar todos los jugadores", e);
 
             throw new ErrorGenericoException(
                     "Error al buscar todos los jugadores",
@@ -63,8 +59,6 @@ public class PlayerService implements IPlayerService {
     @Override
     public PlayerDTO findById(Long id) {
         try {
-
-            logger.info("Buscando jugador con id: {}", id);
 
             Player player = playerRepository.findById(id)
                     .orElseThrow(() ->
@@ -81,8 +75,6 @@ public class PlayerService implements IPlayerService {
 
         } catch (Exception e) {
 
-            logger.error("Error al buscar el jugador con id: {}", id, e);
-
             throw new ErrorGenericoException(
                     "Error al buscar el jugador con id: " + id,
                     e
@@ -93,8 +85,6 @@ public class PlayerService implements IPlayerService {
     @Override
     public PlayerDTO save(PlayerCreateDTO playerCreateDTO) {
         try {
-
-            logger.info("Creando nuevo jugador: {}", playerCreateDTO.getNickname());
 
             Team team = teamRepository.findById(playerCreateDTO.getTeamId())
                     .orElseThrow(() ->
@@ -111,8 +101,6 @@ public class PlayerService implements IPlayerService {
 
             Player playerSaved = playerRepository.save(player);
 
-            logger.info("Jugador creado correctamente con id: {}", playerSaved.getId());
-
             return playerMapper.toDTO(playerSaved);
 
         } catch (NotFoundEntityException e) {
@@ -120,8 +108,6 @@ public class PlayerService implements IPlayerService {
             throw e;
 
         } catch (Exception e) {
-
-            logger.error("Error al crear el jugador: {}", playerCreateDTO, e);
 
             throw new CreateEntityException(
                     "Player",
@@ -134,8 +120,6 @@ public class PlayerService implements IPlayerService {
     @Override
     public PlayerDTO update(Long id, PlayerCreateDTO playerCreateDTO) {
         try {
-
-            logger.info("Actualizando jugador con id: {}", id);
 
             Player playerUpdate = playerRepository.findById(id)
                     .orElseThrow(() ->
@@ -160,19 +144,13 @@ public class PlayerService implements IPlayerService {
 
             Player playerSaved = playerRepository.save(playerUpdate);
 
-            logger.info("Jugador actualizado correctamente con id: {}", id);
-
             return playerMapper.toDTO(playerSaved);
 
         } catch (NotFoundEntityException e) {
 
-            logger.warn("No se puede actualizar. Jugador o equipo no encontrado");
-
             throw e;
 
         } catch (Exception e) {
-
-            logger.error("Error al actualizar el jugador con id: {}", id, e);
 
             throw new UpdateEntityException(
                     "Player",
@@ -186,8 +164,6 @@ public class PlayerService implements IPlayerService {
     public void deleteById(Long id) {
         try {
 
-            logger.info("Eliminando jugador con id: {}", id);
-
             Player player = playerRepository.findById(id)
                     .orElseThrow(() ->
                             new NotFoundEntityException(
@@ -197,17 +173,11 @@ public class PlayerService implements IPlayerService {
 
             playerRepository.delete(player);
 
-            logger.info("Jugador eliminado correctamente con id: {}", id);
-
         } catch (NotFoundEntityException e) {
-
-            logger.warn("No se puede eliminar. Jugador no encontrado con id: {}", id);
 
             throw e;
 
         } catch (Exception e) {
-
-            logger.error("Error al eliminar el jugador con id: {}", id, e);
 
             throw new DeleteEntityException(
                     "Player",

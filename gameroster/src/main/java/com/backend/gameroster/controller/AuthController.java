@@ -4,9 +4,12 @@ import com.backend.gameroster.dto.user.CreateUseroDTO;
 import com.backend.gameroster.dto.user.LoginUserDTO;
 import com.backend.gameroster.exception.CreateEntityException;
 import com.backend.gameroster.exception.ErrorGenericoException;
+import com.backend.gameroster.exception.Response;
 import com.backend.gameroster.services.autentify.IAuthService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -38,8 +41,12 @@ public class AuthController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Usuario registrado correctamente"),
-            @ApiResponse(responseCode = "400", description = "Datos inválidos o usuario/email ya existente"),
-            @ApiResponse(responseCode = "500", description = "Error interno del servidor")
+            @ApiResponse(responseCode = "400", description = "Datos inválidos",
+                    content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "409", description = "Usuario o email duplicado",
+                    content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "500", description = "Error interno",
+                    content = @Content(schema = @Schema(implementation = Response.class)))
     })
     @PostMapping("/register")
     public ResponseEntity<String> register(

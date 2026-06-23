@@ -44,7 +44,7 @@ public class AuthService implements IAuthService {
     @Override
     public void register(CreateUseroDTO dto) {
 
-        logger.info("Registrando usuario {}", dto.getNombreUsuario());
+
 
         try {
 
@@ -61,15 +61,11 @@ public class AuthService implements IAuthService {
 
             userRepository.save(user);
 
-            logger.info("Usuario registrado correctamente {}", user.getUsername());
-
         } catch (ErrorGenericoException ex) {
 
             throw ex;
 
         } catch (Exception ex) {
-
-            logger.error("Error registrando usuario {}", dto.getNombreUsuario(), ex);
 
             throw new CreateEntityException(
                     User.class.getSimpleName(),
@@ -99,7 +95,6 @@ public class AuthService implements IAuthService {
     @Override
     public String login(LoginUserDTO dto) {
 
-        logger.info("Intentando login usuario {}", dto.getNombreUsuario());
 
         try {
 
@@ -115,13 +110,9 @@ public class AuthService implements IAuthService {
 
             String token = jwtTokenProvider.generateToken(userDetails);
 
-            logger.info("Login correcto usuario {}", dto.getNombreUsuario());
-
             return token;
 
         } catch (Exception ex) {
-
-            logger.error("Error login usuario {}", dto.getNombreUsuario(), ex);
 
             throw new ErrorGenericoException(
                     "Usuario o contraseña incorrectos",
