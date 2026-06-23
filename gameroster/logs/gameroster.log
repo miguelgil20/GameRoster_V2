@@ -187,3 +187,8 @@ Consider defining a bean of type 'com.backend.gameroster.services.user.IUsuarioS
 2026-06-23 11:54:02.491 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Iniciando insercion de datos iniciales...
 2026-06-23 11:54:02.551 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Insercion de datos iniciales finalizada
 2026-06-23 11:54:02.553 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2026-06-23 11:54:42.343 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-23 11:54:42.352 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+2026-06-23 11:54:42.354 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23 11:54:42.354 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown initiated...
+2026-06-23 11:54:42.356 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown completed.
