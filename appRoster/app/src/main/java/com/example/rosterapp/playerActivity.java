@@ -60,7 +60,10 @@ public class playerActivity extends AppCompatActivity {
 
             @Override
             public void onError(UtilREST.Response r) {
-                Toast.makeText(playerActivity.this, "Error cargando jugadores", Toast.LENGTH_SHORT).show();
+                CustomToast.show(
+                        playerActivity.this,
+                        "Error cargando jugadores"
+                );
             }
         });
     }

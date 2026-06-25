@@ -27,7 +27,7 @@ public class AboutActivity extends AppCompatActivity {
 
         btnPlaySound.setOnClickListener(v -> {
             mediaPlayer.start();
-            Toast.makeText(this, "Reproduciendo sonido", Toast.LENGTH_SHORT).show();
+            CustomToast.show(this,"Reproduciendo sonido");
         });
 
         btnEmail.setOnClickListener(v -> {

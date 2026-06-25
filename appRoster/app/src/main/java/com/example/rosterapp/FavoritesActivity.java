@@ -57,8 +57,10 @@ public class FavoritesActivity extends AppCompatActivity {
 
             @Override
             public void onError(UtilREST.Response r) {
-                Toast.makeText(FavoritesActivity.this, "Error cargando favoritos", Toast.LENGTH_SHORT).show();
-            }
+                CustomToast.show(
+                        FavoritesActivity.this,
+                        "Error cargando favoritos"
+                );            }
         });
     }
 
@@ -96,14 +98,18 @@ public class FavoritesActivity extends AppCompatActivity {
         API.deleteFavorite(id, token, new UtilREST.OnResponseListener() {
             @Override
             public void onSuccess(UtilREST.Response r) {
-                Toast.makeText(FavoritesActivity.this, "Favorito eliminado", Toast.LENGTH_SHORT).show();
-                cargarFavoritos();
+                CustomToast.show(
+                        FavoritesActivity.this,
+                        " Favorito eliminado correctamente"
+                );                cargarFavoritos();
             }
 
             @Override
             public void onError(UtilREST.Response r) {
-                Toast.makeText(FavoritesActivity.this, "Error eliminando favorito", Toast.LENGTH_SHORT).show();
-            }
+                CustomToast.show(
+                        FavoritesActivity.this,
+                        "Error eliminando favorito"
+                );            }
         });
     }
 }

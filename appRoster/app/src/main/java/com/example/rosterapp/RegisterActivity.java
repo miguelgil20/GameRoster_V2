@@ -55,7 +55,10 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UtilREST.Response r) {
                 cambiarEstadoBoton(false);
-                Toast.makeText(RegisterActivity.this, "Registro completado. Inicia sesión", Toast.LENGTH_LONG).show();
+                CustomToast.show(
+                        RegisterActivity.this,
+                        "Registro completado. Inicia sesión"
+                );
                 abrirLogin();
             }
 

@@ -92,22 +92,20 @@ public class TeamDetailActivity extends AppCompatActivity {
         API.createFavorite(json, token, new UtilREST.OnResponseListener() {
             @Override
             public void onSuccess(UtilREST.Response r) {
-                Toast.makeText(
+                CustomToast.show(
                         TeamDetailActivity.this,
-                        "Equipo añadido a favoritos",
-                        Toast.LENGTH_SHORT
-                ).show();
+                        "Equipo añadido a favoritos"
+                );
 
                 mostrarNotificacionFavorito();
             }
 
             @Override
             public void onError(UtilREST.Response r) {
-                Toast.makeText(
+                CustomToast.show(
                         TeamDetailActivity.this,
-                        "Error al añadir favorito",
-                        Toast.LENGTH_SHORT
-                ).show();
+                        "Error al añadir equipos a favoritos"
+                );
             }
         });
     }

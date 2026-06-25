@@ -87,7 +87,10 @@ public class LoginActivity extends AppCompatActivity {
     private void guardarSesion(String respuesta, String username) {
 
         if (respuesta == null || respuesta.trim().isEmpty()) {
-            Toast.makeText(this, "Respuesta vacía del servidor", Toast.LENGTH_LONG).show();
+            CustomToast.show(
+                    LoginActivity.this,
+                    "Respuesta vacía del servidor"
+            );
             return;
         }
 
@@ -103,7 +106,10 @@ public class LoginActivity extends AppCompatActivity {
                 .putString("username", username)
                 .apply();
 
-        Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
+        CustomToast.show(
+                LoginActivity.this,
+                "Sesión iniciada correctamente"
+        );
         abrirPantallaPrincipal();
     }
 

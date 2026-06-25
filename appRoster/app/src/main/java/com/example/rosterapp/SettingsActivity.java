@@ -45,7 +45,10 @@ public class SettingsActivity extends AppCompatActivity {
                     .putString("language", spinnerLanguage.getSelectedItem().toString())
                     .apply();
 
-            Toast.makeText(this, "Preferencias guardadas", Toast.LENGTH_SHORT).show();
+            CustomToast.show(
+                    this,
+                    "Preferencias Guardadas"
+            );
         });
     }
 }
