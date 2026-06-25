@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface IFavoriteRepository extends CrudRepository<Favorite, Long> {
 
-    @Query("SELECT f.team FROM Favorite f WHERE f.user.code = :userId")
+    @Query("SELECT f FROM Favorite f WHERE f.user.id = :userId")
     List<Favorite> findFavoritesByUserId(@Param("userId") Long userId);
 }

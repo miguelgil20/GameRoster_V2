@@ -160,12 +160,15 @@ public class FavoriteService implements IFavoriteService {
     @Override
     public List<FavoriteDTO> findFavoriteTeamsByUserId(Long userId) {
         try {
+            logger.info("Buscando equipos favoritos del usuario con id: {}", userId);
 
             List<Favorite> favorites = favoriteRepository.findFavoritesByUserId(userId);
 
             return favoriteMapper.toDTOList(favorites);
 
         } catch (Exception e) {
+            logger.error("Error al buscar equipos favoritos del usuario con id: {}", userId, e);
+
             throw new ErrorGenericoException(
                     "Error al buscar equipos favoritos del usuario con id: " + userId,
                     e
