@@ -85,33 +85,26 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void guardarSesion(String respuesta, String username) {
-        try {
-            JSONObject json = new JSONObject(respuesta);
 
-            String token = buscarString(json, "token", "accessToken", "jwt", "bearerToken");
-            long userId = buscarLong(json, "userId", "id", "code", "usuarioId");
-
-            if (TextUtils.isEmpty(token)) {
-                Toast.makeText(this, "Login correcto, pero la respuesta no contiene token", Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit()
-                    .putString("token", token)
-                    .putString("username", username);
-
-            if (userId != -1) {
-                editor.putLong("userId", userId);
-            }
-
-            editor.apply();
-
-            Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
-            abrirPantallaPrincipal();
-
-        } catch (JSONException e) {
-            Toast.makeText(this, "No se pudo leer la respuesta del servidor", Toast.LENGTH_LONG).show();
+        if (respuesta == null || respuesta.trim().isEmpty()) {
+            Toast.makeText(this, "Respuesta vacía del servidor", Toast.LENGTH_LONG).show();
+            return;
         }
+
+        String token = respuesta.trim();
+
+        if (token.startsWith("Bearer ")) {
+            token = token.substring(7);
+        }
+
+        getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                .edit()
+                .putString("token", token)
+                .putString("username", username)
+                .apply();
+
+        Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
+        abrirPantallaPrincipal();
     }
 
     private String buscarString(JSONObject json, String... claves) {

@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 public class API {
 
-    private static final String BASE_URL = "http://192.168.0.27:8080";
+    private static final String BASE_URL = "http://192.168.0.17:8080";
 
     public static void login(JSONObject loginJson,
                              UtilREST.OnResponseListener listener) {
