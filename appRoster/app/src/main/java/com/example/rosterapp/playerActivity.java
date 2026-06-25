@@ -45,7 +45,16 @@ public class playerActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UtilREST.Response r) {
                 players.clear();
-                players.addAll(UtilJSONParser.parseArrayPlayers(r.content));
+
+                ArrayList<PlayerModel> todosLosJugadores =
+                        UtilJSONParser.parseArrayPlayers(r.content);
+
+                for (PlayerModel player : todosLosJugadores) {
+                    if (player.getTeamId().equals(teamId)) {
+                        players.add(player);
+                    }
+                }
+
                 adapter.notifyDataSetChanged();
             }
 
