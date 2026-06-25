@@ -9,11 +9,11 @@
         android:id="@+id/switchNotifications"
         android:layout_width="361dp"
         android:layout_height="48dp"
-        android:text="Activar notificaciones" />
+        android:text="@string/enable_notifications"/>
 
     <CheckBox
         android:id="@+id/checkDarkMode"
-        android:text="Modo oscuro"
+        android:text="@string/dark_mode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/btnSaveSettings"
-        android:text="Guardar ajustes"
+        android:text="@string/save_settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -7,14 +7,14 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="GameRoster"
+        android:text="@string/about_title"
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="Aplicación Android sobre equipos de eSports de Valorant.\nAutor: Miguel Gil Murcia"
+        android:text="@string/about_description"
         android:textAlignment="center"
         android:layout_margin="24dp"
         android:layout_width="match_parent"
@@ -22,13 +22,13 @@
 
     <Button
         android:id="@+id/btnPlaySound"
-        android:text="Reproducir sonido"
+        android:text="@string/play_sound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnEmail"
-        android:text="Enviar correo"
+        android:text="@string/send_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

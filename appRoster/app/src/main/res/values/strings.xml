@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">rosterApp</string>
+    <string name="app_name">GameRoster</string>
+
+    <!-- Login -->
+    <string name="login_title">Iniciar sesión</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Entrar</string>
+    <string name="create_account">Crear cuenta</string>
+
+    <!-- Registro -->
+    <string name="register_title">Registro</string>
+    <string name="email">Correo electrónico</string>
+    <string name="repeat_password">Repetir contraseña</string>
+    <string name="register">Registrarse</string>
+    <string name="already_have_account">Ya tengo cuenta</string>
+
+    <!-- Main -->
+    <string name="teams">Equipos</string>
+    <string name="favorites">Favoritos</string>
+    <string name="settings">Ajustes</string>
+    <string name="about">Acerca de</string>
+
+    <!-- Team -->
+    <string name="top_teams">Solo equipos top</string>
+    <string name="ascending">Asc</string>
+    <string name="descending">Desc</string>
+    <string name="filter">Filtrar</string>
+
+    <!-- Team Detail -->
+    <string name="add_favorite">Añadir a favoritos</string>
+    <string name="view_players">Ver jugadores</string>
+    <string name="share">Compartir</string>
+
+    <!-- Settings -->
+    <string name="enable_notifications">Activar notificaciones</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="save_settings">Guardar ajustes</string>
+
+    <!-- About -->
+    <string name="about_title">GameRoster</string>
+    <string name="about_description">Aplicación Android sobre equipos de eSports de Valorant.\nAutor: Miguel Gil Murcia</string>
+    <string name="play_sound">Reproducir sonido</string>
+    <string name="send_email">Enviar correo</string>
+
 </resources>

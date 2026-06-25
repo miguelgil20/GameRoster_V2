@@ -12,7 +12,7 @@
 
     <CheckBox
         android:id="@+id/checkTopTeams"
-        android:text="Solo equipos top"
+        android:text="@string/top_teams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -24,13 +24,13 @@
 
         <RadioButton
             android:id="@+id/radioAsc"
-            android:text="Asc"
+            android:text="@string/ascending"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <RadioButton
             android:id="@+id/radioDesc"
-            android:text="Desc"
+            android:text="@string/descending"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RadioGroup>
@@ -39,7 +39,7 @@
         android:id="@+id/btnFilter"
         android:layout_width="381dp"
         android:layout_height="65dp"
-        android:text="Filtrar" />
+        android:text="@string/filter" />
 
     <ListView
         android:id="@+id/listTeams"
