@@ -1,49 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="12dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EEF2F7"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:textColor="#3F51B5"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
 
     <Spinner
         android:id="@+id/spinnerRegion"
-        android:layout_width="384dp"
-        android:layout_height="53dp" />
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="12dp" />
 
     <CheckBox
         android:id="@+id/checkTopTeams"
-        android:text="@string/top_teams"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/top_teams"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
 
     <RadioGroup
         android:id="@+id/radioRanking"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
         <RadioButton
             android:id="@+id/radioAsc"
-            android:text="@string/ascending"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/ascending"/>
 
         <RadioButton
             android:id="@+id/radioDesc"
-            android:text="@string/descending"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/descending"/>
+
     </RadioGroup>
 
     <Button
         android:id="@+id/btnFilter"
-        android:layout_width="381dp"
-        android:layout_height="65dp"
-        android:text="@string/filter" />
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/filter"
+        android:layout_marginBottom="16dp"/>
 
     <ListView
         android:id="@+id/listTeams"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#DDDDDD"
+        android:dividerHeight="8dp"/>
 
 </LinearLayout>
