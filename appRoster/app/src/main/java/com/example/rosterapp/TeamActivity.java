@@ -1,4 +1,5 @@
 package com.example.rosterapp;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,7 +10,6 @@ import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.example.rosterapp.API.API;
 import com.example.rosterapp.API.TeamAdapter;
 import com.example.rosterapp.API.TeamModel;
@@ -17,6 +17,8 @@ import com.example.rosterapp.API.UtilJSONParser;
 import com.example.rosterapp.API.UtilREST;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class TeamActivity extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class TeamActivity extends AppCompatActivity {
     private Button btnFilter;
 
     private ArrayList<TeamModel> teams;
+    private ArrayList<TeamModel> allTeams;
     private TeamAdapter adapter;
 
     @Override
@@ -41,14 +44,18 @@ public class TeamActivity extends AppCompatActivity {
         btnFilter = findViewById(R.id.btnFilter);
 
         teams = new ArrayList<>();
+        allTeams = new ArrayList<>();
+
         adapter = new TeamAdapter(this, teams);
         listTeams.setAdapter(adapter);
 
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
-                new String[]{"Todas", "EU", "NA", "LATAM", "KR"}
+                new String[]{"Todas", "EU", "NA", "LATAM", "KR", "APAC", "BR"}
         );
+
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRegion.setAdapter(spinnerAdapter);
 
         registerForContextMenu(listTeams);
@@ -65,17 +72,17 @@ public class TeamActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnFilter.setOnClickListener(v ->
-                Toast.makeText(this, "Filtros aplicados", Toast.LENGTH_SHORT).show()
-        );
+        btnFilter.setOnClickListener(v -> aplicarFiltros());
 
         cargarEquipos();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         cargarEquipos();
     }
+
     private void cargarEquipos() {
         String token = getSharedPreferences("prefs", MODE_PRIVATE)
                 .getString("token", "");
@@ -83,16 +90,60 @@ public class TeamActivity extends AppCompatActivity {
         API.getTeams(token, new UtilREST.OnResponseListener() {
             @Override
             public void onSuccess(UtilREST.Response r) {
-                teams.clear();
-                teams.addAll(UtilJSONParser.parseArrayTeams(r.content));
-                adapter.notifyDataSetChanged();
+                allTeams.clear();
+                allTeams.addAll(UtilJSONParser.parseArrayTeams(r.content));
+
+                aplicarFiltros();
             }
 
             @Override
             public void onError(UtilREST.Response r) {
-                Toast.makeText(TeamActivity.this, "Error cargando equipos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        TeamActivity.this,
+                        "Error cargando equipos",
+                        Toast.LENGTH_SHORT
+                ).show();
             }
         });
+    }
+
+    private void aplicarFiltros() {
+        teams.clear();
+
+        String regionSeleccionada = spinnerRegion.getSelectedItem().toString();
+        boolean soloTop = checkTopTeams.isChecked();
+
+        for (TeamModel team : allTeams) {
+            boolean cumpleRegion =
+                    regionSeleccionada.equals("Todas")
+                            || team.getRegion().equalsIgnoreCase(regionSeleccionada);
+
+            boolean cumpleTop =
+                    !soloTop
+                            || team.getRanking() <= 3;
+
+            if (cumpleRegion && cumpleTop) {
+                teams.add(team);
+            }
+        }
+
+        int radioSeleccionado = radioRanking.getCheckedRadioButtonId();
+
+        if (radioSeleccionado == R.id.radioAsc) {
+            Collections.sort(teams, Comparator.comparingInt(TeamModel::getRanking));
+        } else if (radioSeleccionado == R.id.radioDesc) {
+            Collections.sort(teams, (t1, t2) ->
+                    Integer.compare(t2.getRanking(), t1.getRanking())
+            );
+        }
+
+        adapter.notifyDataSetChanged();
+
+        Toast.makeText(
+                this,
+                "Filtros aplicados",
+                Toast.LENGTH_SHORT
+        ).show();
     }
 
     @Override
