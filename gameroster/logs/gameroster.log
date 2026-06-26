@@ -1028,3 +1028,107 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired 108998 milliseconds ago at 2026
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 2026-06-26 11:00:35.000 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.logException - Resolved [io.jsonwebtoken.ExpiredJwtException: JWT expired 108998 milliseconds ago at 2026-06-26T08:58:46.000Z. Current time: 2026-06-26T09:00:34.998Z. Allowed clock skew: 0 milliseconds.]
+2026-06-26 11:30:25.416 [http-nio-8080-exec-4] INFO  c.b.g.controller.AuthController.login - PETICIÓN LOGIN usuario miguelgilD
+2026-06-26 11:30:27.073 [http-nio-8080-exec-5] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:27.094 [http-nio-8080-exec-8] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:50.851 [http-nio-8080-exec-7] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:50.876 [http-nio-8080-exec-6] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:52.150 [http-nio-8080-exec-9] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:52.169 [http-nio-8080-exec-10] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:55.392 [http-nio-8080-exec-1] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:30:55.393 [http-nio-8080-exec-1] INFO  c.b.g.s.favorite.FavoriteService.findFavoriteTeamsByUserId - Buscando equipos favoritos del usuario con id: 1
+2026-06-26 11:31:03.237 [http-nio-8080-exec-2] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:03.254 [http-nio-8080-exec-3] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:06.280 [http-nio-8080-exec-4] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:09.468 [http-nio-8080-exec-5] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:16.173 [http-nio-8080-exec-8] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:17.022 [http-nio-8080-exec-7] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:20.296 [http-nio-8080-exec-6] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:20.298 [http-nio-8080-exec-6] INFO  c.b.g.s.favorite.FavoriteService.findFavoriteTeamsByUserId - Buscando equipos favoritos del usuario con id: 1
+2026-06-26 11:31:26.299 [http-nio-8080-exec-9] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:26.327 [http-nio-8080-exec-10] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:40.446 [http-nio-8080-exec-1] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 11:31:41.837 [http-nio-8080-exec-2] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:47:00.127 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStarting - Starting GamerosterApplication v1.0.0 using Java 22.0.1 with PID 22784 (C:\Users\Miguel y Sergio\Desktop\GameRoster_V2\gameroster\target\classes started by Miguel y Sergio in C:\Users\Miguel y Sergio\Desktop\GameRoster_V2\gameroster)
+2026-06-26 13:47:00.129 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+2026-06-26 13:47:00.183 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.log - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-26 13:47:00.184 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.log - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-26 13:47:01.311 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 13:47:01.416 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2026-06-26 13:47:02.068 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2026-06-26 13:47:02.085 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2026-06-26 13:47:02.086 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-26 13:47:02.143 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2026-06-26 13:47:02.143 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1958 ms
+2026-06-26 13:47:02.264 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 13:47:02.421 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2026-06-26 13:47:02.522 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@26c08678
+2026-06-26 13:47:02.524 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2026-06-26 13:47:02.536 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - 2 SQL migrations were detected but not run because they did not follow the filename convention.
+2026-06-26 13:47:02.536 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2026-06-26 13:47:02.544 [restartedMain] WARN  o.m.jdbc.message.server.ErrorPacket.warn - Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-06-26 13:47:02.567 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor.info - Database: jdbc:mariadb://localhost:3307/gameroster?user=miguel&password=******** (MariaDB 11.5)
+2026-06-26 13:47:02.574 [restartedMain] WARN  o.f.c.i.database.base.Database.warn - Flyway upgrade recommended: MariaDB 11.5 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-06-26 13:47:02.613 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory.info - Repair of failed migration in Schema History table `gameroster`.`flyway_schema_history` not necessary. No failed migration detected.
+2026-06-26 13:47:02.621 [restartedMain] INFO  o.f.core.internal.command.DbRepair.info - Successfully repaired schema history table `gameroster`.`flyway_schema_history` (execution time 00:00.037s).
+2026-06-26 13:47:02.629 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - 2 SQL migrations were detected but not run because they did not follow the filename convention.
+2026-06-26 13:47:02.629 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2026-06-26 13:47:02.631 [restartedMain] WARN  o.m.jdbc.message.server.ErrorPacket.warn - Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-06-26 13:47:02.646 [restartedMain] WARN  o.f.c.i.database.base.Database.warn - Flyway upgrade recommended: MariaDB 11.5 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-06-26 13:47:02.655 [restartedMain] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 0 migrations (execution time 00:00.003s)
+2026-06-26 13:47:02.656 [restartedMain] WARN  o.f.core.internal.command.DbValidate.warn - No migrations found. Are your locations set up correctly?
+2026-06-26 13:47:02.666 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema `gameroster`: << Empty Schema >>
+2026-06-26 13:47:02.674 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Schema `gameroster` is up to date. No migration necessary.
+2026-06-26 13:47:02.751 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 13:47:02.811 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-06-26 13:47:02.847 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2026-06-26 13:47:03.135 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 13:47:03.214 [restartedMain] INFO  o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 13:47:04.227 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 13:47:04.298 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 13:47:04.869 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name usuarioService
+2026-06-26 13:47:04.920 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 13:47:05.938 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2026-06-26 13:47:05.977 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 13:47:05.987 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStarted - Started GamerosterApplication in 6.878 seconds (process running for 7.721)
+2026-06-26 13:47:05.990 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Iniciando insercion de datos iniciales...
+2026-06-26 13:47:06.125 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - El equipo FNATIC ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.171 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - Equipo añadido: Sentinels
+2026-06-26 13:47:06.182 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - El jugador johnqt ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.188 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - El jugador zekken ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.194 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - El jugador TenZ ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.199 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - El jugador Sacy ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.204 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - El jugador Zellsis ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.208 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - El equipo Paper Rex ya existe. No se inserta de nuevo.
+2026-06-26 13:47:06.208 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Insercion de datos iniciales finalizada
+2026-06-26 13:48:22.811 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 13:48:22.811 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2026-06-26 13:48:22.812 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2026-06-26 13:48:22.888 [http-nio-8080-exec-1] INFO  c.b.g.controller.AuthController.login - PETICIÓN LOGIN usuario miguelgilD
+2026-06-26 13:52:25.116 [http-nio-8080-exec-3] INFO  c.b.g.controller.AuthController.login - PETICIÓN LOGIN usuario miguelgilD
+2026-06-26 13:52:37.108 [http-nio-8080-exec-4] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:37.139 [http-nio-8080-exec-5] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:45.901 [http-nio-8080-exec-6] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:45.924 [http-nio-8080-exec-7] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:50.299 [http-nio-8080-exec-8] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:50.320 [http-nio-8080-exec-9] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:57.757 [http-nio-8080-exec-10] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:52:57.956 [http-nio-8080-exec-1] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:03.036 [http-nio-8080-exec-2] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:03.133 [http-nio-8080-exec-3] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:04.323 [http-nio-8080-exec-4] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:04.326 [http-nio-8080-exec-4] INFO  c.b.g.s.favorite.FavoriteService.findFavoriteTeamsByUserId - Buscando equipos favoritos del usuario con id: 1
+2026-06-26 13:53:28.495 [http-nio-8080-exec-5] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:28.497 [http-nio-8080-exec-5] INFO  c.b.g.s.favorite.FavoriteService.findFavoriteTeamsByUserId - Buscando equipos favoritos del usuario con id: 1
+2026-06-26 13:53:31.760 [http-nio-8080-exec-6] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:31.783 [http-nio-8080-exec-7] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:35.052 [http-nio-8080-exec-8] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:37.307 [http-nio-8080-exec-9] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 13:53:42.645 [http-nio-8080-exec-10] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD

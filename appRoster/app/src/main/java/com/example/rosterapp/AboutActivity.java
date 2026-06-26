@@ -1,10 +1,12 @@
 package com.example.rosterapp;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
+import android.content.res.Configuration;
+import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +19,17 @@ public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+
+        String language = prefs.getString("language", "es");
+
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+
+        Configuration config = getResources().getConfiguration();
+        config.setLocale(locale);
+
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
