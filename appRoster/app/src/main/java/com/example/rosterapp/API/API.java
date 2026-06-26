@@ -105,7 +105,19 @@ public class API {
                 listener
         );
     }
+    public static void updateTeam(Long id,
+                                  JSONObject teamJson,
+                                  String token,
+                                  UtilREST.OnResponseListener listener) {
 
+        UtilREST.runQuery(
+                UtilREST.QueryType.PUT,
+                BASE_URL + "/api/teams/" + id,
+                teamJson.toString(),
+                token,
+                listener
+        );
+    }
     private API() {
     }
 }

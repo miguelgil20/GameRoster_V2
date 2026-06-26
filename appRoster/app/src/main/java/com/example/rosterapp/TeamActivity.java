@@ -71,7 +71,11 @@ public class TeamActivity extends AppCompatActivity {
 
         cargarEquipos();
     }
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarEquipos();
+    }
     private void cargarEquipos() {
         String token = getSharedPreferences("prefs", MODE_PRIVATE)
                 .getString("token", "");

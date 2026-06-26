@@ -27,6 +27,10 @@ public class TeamDetailActivity extends AppCompatActivity {
     private static final int NOTIFICATION_ID = 1;
     private static final int REQUEST_NOTIFICATION_PERMISSION = 100;
 
+    private Button btnEditTeam;
+    private String teamRegion;
+    private int teamRanking;
+
     private TextView txtTeamName, txtRegion, txtRanking;
     private Button btnFavorite, btnPlayers, btnShare;
 
@@ -47,7 +51,10 @@ public class TeamDetailActivity extends AppCompatActivity {
         btnFavorite = findViewById(R.id.btnFavorite);
         btnPlayers = findViewById(R.id.btnPlayers);
         btnShare = findViewById(R.id.btnShare);
+        btnEditTeam = findViewById(R.id.btnEditTeam);
 
+        teamRegion = getIntent().getStringExtra("TEAM_REGION");
+        teamRanking = getIntent().getIntExtra("TEAM_RANKING", 0);
         teamId = getIntent().getLongExtra("TEAM_ID", -1);
         teamName = getIntent().getStringExtra("TEAM_NAME");
 
@@ -68,6 +75,16 @@ public class TeamDetailActivity extends AppCompatActivity {
             share.setType("text/plain");
             share.putExtra(Intent.EXTRA_TEXT, "Mira este equipo de Valorant: " + teamName);
             startActivity(Intent.createChooser(share, "Compartir equipo"));
+        });
+        btnEditTeam.setOnClickListener(v -> {
+            Intent intent = new Intent(this, EditTeamActivity.class);
+
+            intent.putExtra("TEAM_ID", teamId);
+            intent.putExtra("TEAM_NAME", teamName);
+            intent.putExtra("TEAM_REGION", teamRegion);
+            intent.putExtra("TEAM_RANKING", teamRanking);
+
+            startActivity(intent);
         });
     }
 

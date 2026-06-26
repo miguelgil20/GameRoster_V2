@@ -54,7 +54,19 @@ public class UtilJSONParser {
 
         return team;
     }
+    public static JSONObject createTeam(String name, String region, Integer ranking) {
+        JSONObject json = new JSONObject();
 
+        try {
+            json.put("name", name);
+            json.put("region", region);
+            json.put("ranking", ranking);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return json;
+    }
     public static ArrayList<PlayerModel> parseArrayPlayers(String json) {
         ArrayList<PlayerModel> players = new ArrayList<>();
 
