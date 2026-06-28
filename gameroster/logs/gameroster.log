@@ -2179,3 +2179,75 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired 17959 milliseconds ago at 2026-
 2026-06-26 19:40:03.153 [http-nio-8080-exec-4] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
 2026-06-26 19:40:14.880 [http-nio-8080-exec-7] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
 2026-06-26 19:40:16.763 [http-nio-8080-exec-6] INFO  c.b.g.c.s.JwtAuthenticationFilter.doFilterInternal - Usuario autenticado correctamente: miguelgilD
+2026-06-26 21:46:06.993 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStarting - Starting GamerosterApplication using Java 21.0.10 with PID 4364 (C:\Users\Sergi\OneDrive\Escritorio\GameRoster_V2\gameroster\target\classes started by Sergi in C:\Users\Sergi\OneDrive\Escritorio\GameRoster_V2\gameroster)
+2026-06-26 21:46:06.996 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+2026-06-26 21:46:07.049 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.log - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-26 21:46:07.050 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.log - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-26 21:46:08.203 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 21:46:08.309 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2026-06-26 21:46:09.094 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 5000 (http)
+2026-06-26 21:46:09.117 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2026-06-26 21:46:09.117 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-06-26 21:46:09.201 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2026-06-26 21:46:09.201 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2150 ms
+2026-06-26 21:46:09.390 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 21:46:09.674 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2026-06-26 21:46:10.586 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@dc11a19
+2026-06-26 21:46:10.588 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2026-06-26 21:46:10.603 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - 2 SQL migrations were detected but not run because they did not follow the filename convention.
+2026-06-26 21:46:10.603 [restartedMain] INFO  o.f.c.i.r.ResourceNameValidator.info - Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2026-06-26 21:46:10.816 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor.info - Database: jdbc:mariadb://52.87.174.231/gameroster?user=miguel&password=******** (MariaDB 11.8)
+2026-06-26 21:46:11.723 [restartedMain] WARN  o.f.c.i.database.base.Database.warn - Flyway upgrade recommended: MariaDB 11.8 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-06-26 21:46:12.230 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory.info - Schema history table `gameroster`.`flyway_schema_history` does not exist yet
+2026-06-26 21:46:12.336 [restartedMain] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 0 migrations (execution time 00:00.508s)
+2026-06-26 21:46:12.337 [restartedMain] WARN  o.f.core.internal.command.DbValidate.warn - No migrations found. Are your locations set up correctly?
+2026-06-26 21:46:13.126 [restartedMain] INFO  org.flywaydb.core.Flyway.info - All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-06-26 21:46:13.526 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory.info - Creating Schema History table `gameroster`.`flyway_schema_history` ...
+2026-06-26 21:46:15.080 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema `gameroster`: << Empty Schema >>
+2026-06-26 21:46:15.180 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Schema `gameroster` is up to date. No migration necessary.
+2026-06-26 21:46:15.645 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 21:46:15.697 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-06-26 21:46:15.728 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2026-06-26 21:46:15.965 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 21:46:16.231 [restartedMain] INFO  o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.8.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 21:46:17.051 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 21:46:19.439 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:46:19.885 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure - Global AuthenticationManager configured with UserDetailsService bean with name usuarioService
+2026-06-26 21:46:19.921 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 21:46:20.743 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2026-06-26 21:46:20.774 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 5000 (http) with context path '/'
+2026-06-26 21:46:20.780 [restartedMain] INFO  c.b.gameroster.GamerosterApplication.logStarted - Started GamerosterApplication in 14.525 seconds (process running for 15.654)
+2026-06-26 21:46:20.782 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Iniciando insercion de datos iniciales...
+2026-06-26 21:46:21.505 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearRoleSiNoExiste - Role añadido: ADMIN
+2026-06-26 21:46:22.003 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearRoleSiNoExiste - Role añadido: USER
+2026-06-26 21:46:22.815 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - Equipo añadido: FNATIC
+2026-06-26 21:46:23.608 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Boaster al equipo FNATIC
+2026-06-26 21:46:24.410 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Alfajer al equipo FNATIC
+2026-06-26 21:46:25.214 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Chronicle al equipo FNATIC
+2026-06-26 21:46:26.015 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: crashies al equipo FNATIC
+2026-06-26 21:46:26.812 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: kaajak al equipo FNATIC
+2026-06-26 21:46:27.608 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - Equipo añadido: Sentinels
+2026-06-26 21:46:28.403 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: johnqt al equipo Sentinels
+2026-06-26 21:46:29.194 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: zekken al equipo Sentinels
+2026-06-26 21:46:29.988 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: TenZ al equipo Sentinels
+2026-06-26 21:46:30.782 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Sacy al equipo Sentinels
+2026-06-26 21:46:31.573 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Zellsis al equipo Sentinels
+2026-06-26 21:46:32.370 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearEquipoConJugadoresSiNoExiste - Equipo añadido: Paper Rex
+2026-06-26 21:46:33.172 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: f0rsakeN al equipo Paper Rex
+2026-06-26 21:46:33.977 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: something al equipo Paper Rex
+2026-06-26 21:46:34.771 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: mindfreak al equipo Paper Rex
+2026-06-26 21:46:35.566 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: d4v41 al equipo Paper Rex
+2026-06-26 21:46:36.377 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.crearJugadorSiNoExiste - Jugador añadido: Jinggg al equipo Paper Rex
+2026-06-26 21:46:36.377 [restartedMain] INFO  c.b.gameroster.config.InizialiteData.run - Insercion de datos iniciales finalizada
+2026-06-26 21:57:28.863 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 21:57:28.869 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+2026-06-26 21:57:28.874 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:57:28.877 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2026-06-26 21:57:29.037 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
